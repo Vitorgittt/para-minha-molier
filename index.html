@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo de Imortalidade // Skill Issue Detected</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>&#x2693; Procurado: Doidinha da Cabeca &#x2693;</h1>
+        
+        <div class="music-container">
+            <!-- Audio invisivel controlado por JS -->
+            <audio id="bg-audio" loop>
+                <source src="carolina.mp3" type="audio/mpeg">
+                Seu navegador nao suporta audio.
+            </audio>
+            <!-- Botao customizado -->
+            <button id="music-toggle-btn" onclick="alternarMusica()">
+                &#x1F3B5; Ligar Trilha Sonora (SUA MUSICA)
+            </button>
+        </div>
+
+
+        <div class="timer-box">
+            <div class="timer-title">Tempo aguentando seus surtos e piadas acidas:</div>
+            <div id="timer">Calculando segundos de pura paciencia...</div>
+        </div>
+
+        <div class="letter-content">
+            <p>> _ Iniciando transmissao confidencial...</p>
+            <p>Olha, para alguem que diz que ler manga de pirata esticavel e alta cultura e passa raiva morrendo depois de buildar fumaca errada na Split, ate que voce serve para ser a minha dupla oficial nesse servidor caotico chamado vida.</p>
+            <p>Voce e meio corrompida das ideias? Sim. Tem o humor questionavel? Com certeza. Mas como diria a propria Clove: <i>"Eu tenho todo o tempo do mundo"</i>... entao decidi gastar um pouco dele trancado em um site com voce. Mas antes do seu premio, prove que nao tem <b>Skill Issue</b>.</p>
+        </div>
+
+        <div class="quiz-card" id="quiz-section">
+            <h3 id="question">Desafio 1: Quem manda na tripulacao e escolhe o que vamos comer na sexta-feira?</h3>
+            <div id="options-container">
+                <button class="btn" onclick="checkAnswer(true)">Voce (com 100% de autoritarismo)</button>
+                <button class="btn btn-wrong" id="btn-nao" onmouseover="fogeBotao()" onclick="checkAnswer(false)">Eu (Decisao democratica)</button>
+            </div>
+            <div id="feedback"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

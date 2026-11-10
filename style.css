@@ -1,0 +1,245 @@
+:root {
+    --bg-color: #0b0c10;
+    --clove-purple: #8a2be2;
+    --clove-pink: #ff69b4;
+    --clove-cyan: #00ffff;
+    --text-color: #c5c6c7;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 15px; /* Reduzido para dar mais espaco em telas pequenas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: rgba(20, 20, 30, 0.8);
+    border: 2px solid var(--clove-purple);
+    box-shadow: 0 0 20px var(--clove-purple);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+h1 {
+    color: var(--clove-pink);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--clove-pink);
+    margin-bottom: 5px;
+    word-wrap: break-word; /* Evita que o titulo quebre a tela do celular */
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: var(--clove-cyan);
+    margin-bottom: 25px;
+}
+
+.timer-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px dashed var(--clove-cyan);
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+.timer-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+#timer {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.letter-content {
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.quiz-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #444;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* --- BOTOES NEON ADAPTADOS --- */
+#options-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* Faz os botoes irem para a linha de baixo se nao couberem */
+}
+
+.btn {
+    background: rgba(0, 255, 255, 0.05);
+    border: 2px solid var(--clove-cyan);
+    color: var(--clove-cyan);
+    padding: 12px 26px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--clove-cyan);
+    color: #0b0c10;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.btn-wrong {
+    background: rgba(255, 105, 180, 0.05);
+    border: 2px solid var(--clove-pink);
+    color: var(--clove-pink);
+    transition: border-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.btn-wrong:hover {
+    background: var(--clove-pink) !important;
+    color: #0b0c10 !important;
+    border-color: var(--clove-pink) !important;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.6) !important;
+}
+
+#feedback {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+/* --- CONTAINER E BOTAO DA MUSICA --- */
+.music-container {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#music-toggle-btn {
+    background: rgba(138, 43, 226, 0.1);
+    border: 1px solid var(--clove-purple);
+    color: var(--clove-purple);
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+#music-toggle-btn:hover {
+    background: var(--clove-purple);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+    transform: translateY(-1px);
+}
+
+#music-toggle-btn.playing {
+    border-color: var(--clove-pink);
+    color: var(--clove-pink);
+    background: rgba(255, 105, 180, 0.1);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+#music-toggle-btn.playing:hover {
+    background: var(--clove-pink);
+    color: #0b0c10;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+}
+
+#btn-nao {
+    position: relative;
+}
+
+.reward-title {
+    color: gold; 
+    text-shadow: 0 0 10px gold;
+}
+
+.reward-box {
+    background: rgba(255,217,0,0.1); 
+    border: 2px dashed gold; 
+    padding: 15px; 
+    border-radius: 8px; 
+    margin: 15px 0;
+}
+
+/* ==========================================================================
+   REGRAS DE ADAPTACAO PARA CELULAR (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px 15px; /* Diminui o espacamento interno para sobrar tela */
+        border-width: 1px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Letras menores para nao estourarem a linha */
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    #timer {
+        font-size: 1.1rem; /* Ajusta o contador para caber certinho em uma linha */
+    }
+
+    .letter-content {
+        font-size: 0.85rem; /* Texto levemente menor para melhor leitura no celular */
+    }
+
+    #options-container {
+        flex-direction: column; /* Coloca um botao embaixo do outro para nao esmagar */
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%; /* Botoes ocupam a largura total disponivel no card */
+        max-width: 280px;
+        margin: 6px 0;
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+}
